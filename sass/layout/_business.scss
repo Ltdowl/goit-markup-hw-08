@@ -1,0 +1,30 @@
+.business__list {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -30px;
+	margin-bottom: -30px;
+}
+.business__list-card {
+	position: relative;
+	flex-basis: calc(100% / 3 - 30px);
+	margin-left: 30px;
+	margin-bottom: 30px;
+}
+.business__list-item {
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 70px;
+	background: var(--background-text);
+}
+.business__list-text {
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.03em;
+	color: var(--primary-white-color);
+	text-transform: uppercase;
+}

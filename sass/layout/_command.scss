@@ -1,0 +1,34 @@
+.command__list {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -30px;
+	margin-bottom: -30px;
+	text-align: center;
+}
+.command__list-text {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.command__list-card {
+	flex-basis: calc(100% / 4 - 30px);
+	margin-left: 30px;
+	margin-bottom: 30px;
+	background-color: var(--primary-white-color);
+	box-shadow: var(--list-shadow);
+	border-radius: 0px 0px 4px 4px;
+}
+.command__list-text-name {
+	color: var(--text-color-title);
+	font-family: inherit;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.18;
+	letter-spacing: 0.03em;
+	margin-bottom: 10px;
+}
+.command__list-text-proffesion {
+	font-size: 16px;
+	line-height: 1.18;
+	letter-spacing: 0.03em;
+	margin-bottom: 16px;
+}

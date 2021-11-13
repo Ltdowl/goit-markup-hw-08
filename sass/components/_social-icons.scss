@@ -1,0 +1,55 @@
+.social-icons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.social-icons__list {
+	list-style: none;
+	margin-right: 10px;
+	&:last-child {
+		margin-right: 0;
+	}
+}
+.social-icons__link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	border-radius: 100%;
+	transition-property: background-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	// фокус в карточках
+	&:hover .social-icons__item,
+	&:focus .social-icons__item {
+		fill: var(--primary-white-color);
+	}
+	&:hover,
+	&:focus {
+		background-color: var(--accent-color);
+		border-radius: 100%;
+	}
+}
+.social-icons__item {
+	fill: var(--icon-not-active);
+	transition-property: fill;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-icons__link.footer-link {
+	background-color: var(--icon-footer);
+	border-radius: 100%;
+	// фокус в футере
+	&:hover,
+	&:focus {
+		background-color: var(--accent-color);
+	}
+	&:hover .social-icons__item,
+	&:focus .social-icons__item {
+		fill: var(--primary-white-color);
+	}
+}
+.footer-icon {
+	fill: var(--primary-white-color);
+}
