@@ -9,6 +9,7 @@
 	transition-property: background-color, box-shadow, color;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	
 }
 .button.primary {
 	color: var(--primary-white-color);
@@ -45,10 +46,12 @@
 	color: var(--primary-white-color);
 	background-color: var(--accent-color);
 }
+.button.button-footer {
+margin: 0 auto;
+}
 .button__icon {
 	margin-left: 10px;
 }
-
 .button-modal {
 	margin: 0 auto;
 }

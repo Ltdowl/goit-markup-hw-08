@@ -2,7 +2,7 @@
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	max-width: 528px;
+	width: 450px;
 	transform: translate(-50%, -50%);
 	padding: 40px;
 	background-color: var(--primary-white-color);
@@ -11,16 +11,26 @@
 	transition-property: transform;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+
+@media screen and (min-width: 1200px) {
+	width: 528px;
+}
 }
 .modal-text {
 	display: block;
 	text-align: center;
 	font-size: 20px;
-	line-height: 1.15;
+	line-height: 1.5;
 	letter-spacing: 0.03em;
 	color: var(--text-color-title);
+
+	@media screen and (min-width: 1200px) {
+	line-height: 1.15;
+}
 }
 .backdrop__modal-form {
+
 }
 .form-list {
 	margin-top: 12px;

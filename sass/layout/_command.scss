@@ -1,21 +1,42 @@
 .command__list {
-	display: flex;
-	flex-wrap: wrap;
-	margin-left: -30px;
-	margin-bottom: -30px;
 	text-align: center;
+	@media screen and (min-width: 768px) {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -30px;
+		margin-bottom: -30px;
+		
+	}
 }
 .command__list-text {
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
 .command__list-card {
-	flex-basis: calc(100% / 4 - 30px);
-	margin-left: 30px;
 	margin-bottom: 30px;
+	@media screen and (max-width: 767px) {
+		margin-bottom: 0;
+	}
 	background-color: var(--primary-white-color);
 	box-shadow: var(--list-shadow);
 	border-radius: 0px 0px 4px 4px;
+
+	@media screen and (min-width: 768px) {
+		flex-basis: calc(100% / 2 - 30px);
+		margin-left: 30px;
+	}
+	@media screen and (min-width: 1200px) {
+		flex-basis: calc(100% / 4 - 30px);
+	}
+}
+
+.command__list-card + .command__list-card {
+
+	@media screen and (max-width: 767px) {
+		margin-top: 30px;
+	}
+
+
 }
 .command__list-text-name {
 	color: var(--text-color-title);
