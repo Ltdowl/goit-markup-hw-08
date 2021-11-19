@@ -12,26 +12,36 @@
 	font-size: 14px;
 	line-height: 1.71;
 	letter-spacing: 0.03em;
-	padding-left: 36.38px;
+	padding: auto;
+	padding-left: 16.38px;
+	@media screen and (max-width: 1199px) {
+		font-size: 12px;
+	}
 }
 .checkbox-icon {
 	position: absolute;
 	top: 50%;
-	left: 15px;
+	left: 0;
 	width: 16px;
 	height: 16px;
 	border: 2px solid var(--text-color-title);
 	border-radius: 4px;
 	box-sizing: border-box;
 	transform: translateY(-50%);
+	@media screen and (min-width: 1200px) {
+		left: 15px;
+	}
 }
 .icon-check {
 	position: absolute;
 	top: 50%;
-	left: 15px;
+	left: 0;
 	opacity: 0;
 	fill: var(--primary-white-color);
 	transform: translateY(-50%);
+	@media screen and (min-width: 1200px) {
+		left: 15px;
+	}
 }
 .checkbox-icon,
 .icon-check {

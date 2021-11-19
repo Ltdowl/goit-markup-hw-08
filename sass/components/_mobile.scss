@@ -4,7 +4,7 @@
 	padding: 0;
 	border: none;
 	background-color: transparent;
-	z-index: 110;
+	z-index: 20;
 	line-height: 0;
 	@media screen and (min-width: 768px) {
 		display: none;
@@ -35,7 +35,7 @@
 	display: none;
 	@media screen and (max-width: 767px) {
 		position: fixed;
-		z-index: 100;
+		z-index: 10;
 		top: 0;
 		left: 0;
 		width: 100%;

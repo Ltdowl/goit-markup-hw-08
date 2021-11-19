@@ -1,25 +1,52 @@
 .portfolio__navigation {
 	display: flex;
-	justify-content: center;
-	text-align: center;
-	margin-bottom: 50px;
+	@media screen and (max-width: 767px) {
+		flex-wrap: wrap;
+		margin-bottom: 40px;
+	}
+	@media screen and (min-width: 768px) {
+		flex-wrap: nowrap;
+		justify-content: center;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	@media screen and (min-width: 768px) {
+		margin-bottom: 50px;
+	}
 }
 .portfolio__navigation-list {
 	margin-right: 8px;
 	&:last-child {
 		margin-right: 0;
 	}
+	@media screen and (max-width: 767px) {
+		&:not(:nth-last-child(-n + 2)) {
+			margin-bottom: 15px;
+		}
+	}
 }
 .portfolio__gallery {
-	display: flex;
-	flex-wrap: wrap;
-	margin-left: -30px;
-	margin-bottom: -30px;
+	@media screen and (min-width: 768px) {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -30px;
+		margin-bottom: -30px;
+	}
 }
 .portfolio__gallery-list {
-	flex-basis: calc(100% / 3 - 30px);
-	margin-left: 30px;
-	margin-bottom: 30px;
+	@media screen and (min-width: 768px) {
+		flex-basis: calc(100% / 2 - 30px);
+		margin-left: 30px;
+		margin-bottom: 30px;
+	}
+	@media screen and (min-width: 1200px) {
+		flex-basis: calc(100% / 3 - 30px);
+	}
+}
+.portfolio__gallery-list + .portfolio__gallery-list {
+	@media screen and (max-width: 767px) {
+		margin-top: 30px;
+	}
 }
 .portfolio__gallery-link {
 	display: block;
@@ -47,7 +74,6 @@
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	color: var(--primary-white-color);
-	padding: 63px 24px;
 	margin: 0;
 	font-size: 18px;
 	line-height: 1.56;
@@ -56,8 +82,20 @@
 		transform: translatey(0);
 		opacity: 1;
 	}
+	@media screen and (max-width: 767px) {
+		padding: 77px 24px;
+	}
+	@media screen and (min-width: 768px) {
+		padding: 49px 24px;
+	}
+	@media screen and (min-width: 768px) {
+		padding: 63px 24px;
+	}
 }
 .portfolio__gallery-block {
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-right: 12px;
+}
 	padding: 20px 24px 20px 24px;
 	border-left: var(--border-card);
 	border-right: var(--border-card);
@@ -72,6 +110,7 @@
 	line-height: 2;
 	letter-spacing: 0.06em;
 	margin-bottom: 4px;
+	
 }
 .portfolio__gallery-text {
 	font-size: 16px;

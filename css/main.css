@@ -481,6 +481,7 @@ address {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 30;
 }
 
 .backdrop.is-hidden {
@@ -675,13 +676,20 @@ address {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  padding-left: 36.38px;
+  padding: auto;
+  padding-left: 16.38px;
+}
+
+@media screen and (max-width: 1199px) {
+  .checkbox-text {
+    font-size: 12px;
+  }
 }
 
 .checkbox-icon {
   position: absolute;
   top: 50%;
-  left: 15px;
+  left: 0;
   width: 16px;
   height: 16px;
   border: 2px solid var(--text-color-title);
@@ -692,14 +700,26 @@ address {
           transform: translateY(-50%);
 }
 
+@media screen and (min-width: 1200px) {
+  .checkbox-icon {
+    left: 15px;
+  }
+}
+
 .icon-check {
   position: absolute;
   top: 50%;
-  left: 15px;
+  left: 0;
   opacity: 0;
   fill: var(--primary-white-color);
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+@media screen and (min-width: 1200px) {
+  .icon-check {
+    left: 15px;
+  }
 }
 
 .checkbox-icon,
@@ -736,7 +756,7 @@ address {
   padding: 0;
   border: none;
   background-color: transparent;
-  z-index: 110;
+  z-index: 20;
   line-height: 0;
 }
 
@@ -781,7 +801,7 @@ address {
 @media screen and (max-width: 767px) {
   .header__menu {
     position: fixed;
-    z-index: 100;
+    z-index: 10;
     top: 0;
     left: 0;
     width: 100%;
@@ -1551,11 +1571,32 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio__navigation {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__navigation {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__navigation {
+    margin-bottom: 50px;
+  }
 }
 
 .portfolio__navigation-list {
@@ -1566,21 +1607,44 @@ address {
   margin-right: 0;
 }
 
-.portfolio__gallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-left: -30px;
-  margin-bottom: -30px;
+@media screen and (max-width: 767px) {
+  .portfolio__navigation-list:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 15px;
+  }
 }
 
-.portfolio__gallery-list {
-  -ms-flex-preferred-size: calc(100% / 3 - 30px);
-      flex-basis: calc(100% / 3 - 30px);
-  margin-left: 30px;
-  margin-bottom: 30px;
+@media screen and (min-width: 768px) {
+  .portfolio__gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: -30px;
+    margin-bottom: -30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__gallery-list {
+    -ms-flex-preferred-size: calc(100% / 2 - 30px);
+        flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio__gallery-list {
+    -ms-flex-preferred-size: calc(100% / 3 - 30px);
+        flex-basis: calc(100% / 3 - 30px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio__gallery-list + .portfolio__gallery-list {
+    margin-top: 30px;
+  }
 }
 
 .portfolio__gallery-link {
@@ -1623,7 +1687,6 @@ address {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--primary-white-color);
-  padding: 63px 24px;
   margin: 0;
   font-size: 18px;
   line-height: 1.56;
@@ -1636,11 +1699,35 @@ address {
   opacity: 1;
 }
 
+@media screen and (max-width: 767px) {
+  .portfolio__gallery-text-card {
+    padding: 77px 24px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__gallery-text-card {
+    padding: 49px 24px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__gallery-text-card {
+    padding: 63px 24px;
+  }
+}
+
 .portfolio__gallery-block {
   padding: 20px 24px 20px 24px;
   border-left: var(--border-card);
   border-right: var(--border-card);
   border-bottom: var(--border-card);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio__gallery-block {
+    padding-right: 12px;
+  }
 }
 
 .portfolio__gallery-title {

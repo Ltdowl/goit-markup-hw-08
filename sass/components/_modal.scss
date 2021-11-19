@@ -11,11 +11,9 @@
 	transition-property: transform;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-
-@media screen and (min-width: 1200px) {
-	width: 528px;
-}
+	@media screen and (min-width: 1200px) {
+		width: 528px;
+	}
 }
 .modal-text {
 	display: block;
@@ -26,11 +24,10 @@
 	color: var(--text-color-title);
 
 	@media screen and (min-width: 1200px) {
-	line-height: 1.15;
-}
+		line-height: 1.15;
+	}
 }
 .backdrop__modal-form {
-
 }
 .form-list {
 	margin-top: 12px;
@@ -38,7 +35,6 @@
 .form-list + .form-list {
 	margin-top: 10px;
 }
-
 .form-list-text {
 	margin-bottom: 4px;
 	font-size: 12px;
