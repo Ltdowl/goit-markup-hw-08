@@ -167,6 +167,7 @@ address {
 
 .section__hero {
   max-width: 480px;
+  height: 400px;
   margin: 0 auto;
   text-align: center;
   background-image: -webkit-gradient(linear, left top, left bottom, from(var(--image-background))), url(../images/background/bg-mobile.jpg);
@@ -188,8 +189,6 @@ address {
 @media screen and (min-width: 768px) {
   .section__hero {
     max-width: 768px;
-    padding-top: 200px;
-    padding-bottom: 200px;
     background-image: url(../images/background/bg-tablet.jpg);
   }
 }
@@ -203,6 +202,9 @@ address {
 @media screen and (min-width: 1200px) {
   .section__hero {
     max-width: 1600px;
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
     background-image: url(../images/background/bg-dekstop.jpg);
   }
 }
@@ -469,11 +471,12 @@ address {
 
 .backdrop {
   position: fixed;
-  opacity: 1;
+  z-index: 999;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  padding: 15px;
   background-color: rgba(0, 0, 0, 0.2);
   -webkit-transition-property: opacity;
   transition-property: opacity;
@@ -481,7 +484,6 @@ address {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 30;
 }
 
 .backdrop.is-hidden {
@@ -526,30 +528,39 @@ address {
 }
 
 .backdrop__modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 450px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  position: relative;
   padding: 40px;
+  margin: 0;
+  width: 100%;
+  min-height: 581px;
   background-color: var(--primary-white-color);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
+  -webkit-transition-property: scale, -webkit-transform;
+  transition-property: scale, -webkit-transform;
+  transition-property: transform, scale;
+  transition-property: transform, scale, -webkit-transform;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media (min-width: 480px) {
+  .backdrop__modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 450px;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .backdrop__modal {
-    width: 528px;
+    max-width: 528px;
   }
 }
 
@@ -676,7 +687,6 @@ address {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  padding: auto;
   padding-left: 16.38px;
 }
 
@@ -905,6 +915,12 @@ address {
   letter-spacing: 0.02em;
 }
 
+@media screen and (max-width: 319px) {
+  .contacts-mail {
+    font-size: 8vw;
+  }
+}
+
 .social__list {
   display: none;
 }
@@ -914,16 +930,15 @@ address {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     margin-top: 64px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
 .social__list-link {
   display: block;
-  padding: 0;
+  padding: 5px;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
@@ -933,7 +948,7 @@ address {
 
 .social__list-link::after {
   content: "";
-  margin-left: 15px;
+  margin-left: 10px;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
@@ -1439,9 +1454,8 @@ address {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
@@ -1699,7 +1713,13 @@ address {
   opacity: 1;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 320px) {
+  .portfolio__gallery-text-card {
+    padding: 15px;
+  }
+}
+
+@media screen and (min-width: 480px) {
   .portfolio__gallery-text-card {
     padding: 77px 24px;
   }

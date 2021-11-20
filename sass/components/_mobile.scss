@@ -108,6 +108,9 @@
 	letter-spacing: 0.02em;
 }
 .contacts-mail {
+	@media screen and (max-width: 319px) {
+		font-size: 8vw;
+	}
 	text-decoration: none;
 	color: var(--text-color);
 	font-weight: 500;
@@ -119,15 +122,15 @@
 	display: none;
 	@media screen and (max-width: 767px) {
 		display: flex;
-		justify-content: space-between;
 		margin-top: 64px;
+		flex-wrap: wrap;
 	}
 }
 .social__list-item {
 }
 .social__list-link {
 	display: block;
-	padding: 0;
+	padding: 5px;
 	font-weight: 500;
 	font-size: 18px;
 	line-height: 1.22;
@@ -135,9 +138,10 @@
 	color: var(--accent-color);
 	&::after {
 		content: "";
-		margin-left: 15px;
+		margin-left: 10px;
 		border-right: 1px solid rgba(33, 33, 33, 0.2);
 	}
+	
 }
 .social__list-item:last-of-type .social__list-link::after {
 	border-right: none;

@@ -39,6 +39,7 @@
 }
 .section__hero {
 	max-width: 480px;
+	height: 400px;
 	margin: 0 auto;
 	text-align: center;
 	background-image: linear-gradient(var(--image-background)), url(../images/background/bg-mobile.jpg);
@@ -53,8 +54,7 @@
 	}
 	@media screen and (min-width: 768px) {
 			max-width: 768px;
-		padding-top: 200px;
-		padding-bottom: 200px;
+		
 		background-image: url(../images/background/bg-tablet.jpg);
 		@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
 			background-image: url("../images/background/bg-tablet@2x.jpg");
@@ -62,6 +62,9 @@
 	}
 	@media screen and (min-width: 1200px) {
 			max-width: 1600px;
+			height: 600px;
+			padding-top: 200px;
+		padding-bottom: 200px;
 		background-image: url(../images/background/bg-dekstop.jpg);
 		@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
 			background-image: url("../images/background/bg-dekstop@2x.jpg");
