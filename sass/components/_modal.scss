@@ -36,7 +36,12 @@
 }
 .form-list {
 	margin-top: 12px;
+	&.position {
+	margin-bottom: 20px;
 }
+}
+
+
 .form-list + .form-list {
 	margin-top: 10px;
 }

@@ -343,12 +343,28 @@ address {
   margin: 0 auto;
 }
 
+@media screen and (min-width: 768px) {
+  .button.button-footer {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .button.button-footer {
+    margin-top: 0;
+  }
+}
+
 .button__icon {
   margin-left: 10px;
 }
 
 .button-modal {
   margin: 0 auto;
+}
+
+.button-modal.position {
+  margin-top: 30px;
 }
 
 .social-icons {
@@ -590,6 +606,10 @@ address {
   margin-top: 12px;
 }
 
+.form-list.position {
+  margin-bottom: 20px;
+}
+
 .form-list + .form-list {
   margin-top: 10px;
 }
@@ -680,8 +700,16 @@ address {
 
 .checkbox {
   position: relative;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 16px;
 }
 
 .check-link {
@@ -689,23 +717,23 @@ address {
 }
 
 .checkbox-text {
-  display: block;
-  text-align: center;
-  font-size: 14px;
-  line-height: 1.71;
+  margin-left: 8px;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
-  padding-left: 16.38px;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 1200px) {
   .checkbox-text {
-    font-size: 12px;
+    margin-left: 8.38px;
+    font-size: 14px;
+    line-height: 1.71;
   }
 }
 
 .checkbox-icon {
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 0;
   width: 16px;
   height: 16px;
@@ -713,29 +741,31 @@ address {
   border-radius: 4px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
 }
 
 @media screen and (min-width: 1200px) {
   .checkbox-icon {
+    top: 50%;
     left: 15px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
 }
 
 .icon-check {
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 0;
   opacity: 0;
   fill: var(--primary-white-color);
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
 }
 
 @media screen and (min-width: 1200px) {
   .icon-check {
+    top: 50%;
     left: 15px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
 }
 
@@ -978,6 +1008,12 @@ address {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  .header-container {
+    height: 80px;
+  }
 }
 
 .header__navigation {
@@ -1544,10 +1580,17 @@ address {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--primary-white-color);
 }
 
 .footer__form-area:focus {
   color: var(--primary-white-color);
+}
+
+@media screen and (min-width: 768px) {
+  .footer__form-area {
+    width: 450px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1572,6 +1615,23 @@ address {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (min-width: 768px) {
+  .footer__form-text {
+    top: 15px;
+    bottom: 15px;
+    left: 116px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__form-text {
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    left: 16px;
+  }
+}
+
 .footer__form-area:focus + .footer__form-text,
 .footer__form-area:not(:placeholder-shown) + .footer__form-text {
   -webkit-transform: translateX(-70px);
@@ -1582,8 +1642,8 @@ address {
 @media screen and (max-width: 1199px) {
   .footer__form-area:focus + .footer__form-text,
   .footer__form-area:not(:placeholder-shown) + .footer__form-text {
-    -webkit-transform: translateY(40px);
-            transform: translateY(40px);
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
     color: var(--primary-white-color);
   }
 }

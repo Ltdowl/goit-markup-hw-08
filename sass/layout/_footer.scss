@@ -117,8 +117,12 @@
 	transition-property: background-color;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	color: var(--primary-white-color);
 	&:focus {
 		color: var(--primary-white-color);
+	}
+	@media screen and (min-width: 768px) {
+		width: 450px;
 	}
 	@media screen and (min-width: 1200px) {
 		width: 358px;
@@ -130,13 +134,28 @@
 	top: 15px;
 	bottom: 15px;
 	left: 16px;
+	
 	transition-property: transform, color;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	@media screen and (min-width: 768px) {
+	top: 15px;
+	bottom: 15px;
+	left: 116px;
+	}
+	
+	@media screen and (min-width: 1200px) {
+	position: absolute;
+	top: 15px;
+	bottom: 15px;
+	left: 16px;
+	}
+
 	.footer__form-area:focus + &,
 	.footer__form-area:not(:placeholder-shown) + & {
 		@media screen and (max-width: 1199px) {
-			transform: translateY(40px);
+			transform: translateY(-40px);
 			color: var(--primary-white-color);
 		}
 		transform: translateX(-70px);

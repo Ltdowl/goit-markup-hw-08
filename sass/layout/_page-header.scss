@@ -6,6 +6,10 @@
 	align-items: center;
 	position: relative;
 	justify-content: space-between;
+	@media screen and (min-width: 768px) {
+		height: 80px;
+	}
+	
 }
 .header__navigation {
 	display: none;
