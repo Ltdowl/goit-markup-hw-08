@@ -20,8 +20,11 @@
 }
 .logo__text-footer-white {
 	color: var(--primary-white-color);
+}
+.logo.logo-footer {
 	display: inline-block;
 	margin-bottom: 20px;
+	padding: 0;
 }
 .logo.link-text {
 	color: var(--accent-color);

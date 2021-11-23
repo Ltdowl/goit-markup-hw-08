@@ -182,20 +182,23 @@ address {
 
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .section__hero {
-    background-image: url("../images/background/bg-mobile@2x.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--image-background))), url("../images/background/bg-mobile@2x.jpg");
+    background-image: linear-gradient(var(--image-background)), url("../images/background/bg-mobile@2x.jpg");
   }
 }
 
 @media screen and (min-width: 768px) {
   .section__hero {
     max-width: 768px;
-    background-image: url(../images/background/bg-tablet.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--image-background))), url(../images/background/bg-tablet.jpg);
+    background-image: linear-gradient(var(--image-background)), url(../images/background/bg-tablet.jpg);
   }
 }
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .section__hero {
-    background-image: url("../images/background/bg-tablet@2x.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--image-background))), url("../images/background/bg-tablet@2x.jpg");
+    background-image: linear-gradient(var(--image-background)), url("../images/background/bg-tablet@2x.jpg");
   }
 }
 
@@ -205,13 +208,15 @@ address {
     height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
-    background-image: url(../images/background/bg-dekstop.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--image-background))), url(../images/background/bg-dekstop.jpg);
+    background-image: linear-gradient(var(--image-background)), url(../images/background/bg-dekstop.jpg);
   }
 }
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .section__hero {
-    background-image: url("../images/background/bg-dekstop@2x.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--image-background))), url("../images/background/bg-dekstop@2x.jpg");
+    background-image: linear-gradient(var(--image-background)), url("../images/background/bg-dekstop@2x.jpg");
   }
 }
 
@@ -477,8 +482,12 @@ address {
 
 .logo__text-footer-white {
   color: var(--primary-white-color);
+}
+
+.logo.logo-footer {
   display: inline-block;
   margin-bottom: 20px;
+  padding: 0;
 }
 
 .logo.link-text {
